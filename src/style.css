@@ -160,6 +160,36 @@ a:hover {
   outline-offset: 2px;
 }
 
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__tour {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  color: var(--cta);
+  font-family: var(--body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1.5px solid var(--cta);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.navbar__tour:hover {
+  background: var(--cta);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.navbar__tour:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -401,13 +431,7 @@ a:hover {
 @media (min-width: 1024px) {
   .gallery__grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 280px);
-  }
-  .gallery__item--tall {
-    grid-row: span 2;
-  }
-  .gallery__item--wide {
-    grid-column: span 2;
+    grid-auto-rows: 280px;
   }
 }
 
@@ -845,6 +869,19 @@ a:hover {
 
   .navbar__cta-text:not(.navbar__cta-text--short) {
     display: none;
+  }
+
+  .navbar__tour {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+    border-radius: 8px;
+  }
+
+  .navbar__tour svg,
+  .navbar__tour img {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
   }
 
   /* Hero — compact: image fills top, content sits on its lower edge */

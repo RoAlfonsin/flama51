@@ -22,22 +22,36 @@ const icons = {
   whatsapp: `<img src="/whatsapp.svg" alt="WhatsApp" width="24" height="24" />`,
   laptop: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18h4"/><path d="M4 18h4"/><path d="M16 6H4"/><path d="M16 18a2 2 0 0 1 2 2"/><path d="M4 6a2 2 0 0 1 2-2"/><path d="M16 6V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/><path d="M8 20h8"/></svg>',
   television: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"/><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M12 12v6"/></svg>',
-  bed: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>'
+  bed: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>',
+  video: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 576 512" fill="currentColor"><path d="M96 64c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L96 64zM464 336l73.5 58.8c4.2 3.4 9.4 5.2 14.8 5.2 13.1 0 23.7-10.6 23.7-23.7l0-240.6c0-13.1-10.6-23.7-23.7-23.7-5.4 0-10.6 1.8-14.8 5.2L464 176 464 336z"/></svg>',
 }
 
 const images = [
-  'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&auto=format&fit=crop&q=80',
-  '/fachadaFrontal.jpg',
-  '/fachadaTrasera.jpg',
-  '/salaComedor.jpg',
-  '/fachadaCoche.jpg',
-  '/recamara.jpg',
-  '/bano.jpg',
+  '/HeroPic.jpeg',
+  '/HomePicture2.jpeg',
+  '/HomePicture3.jpeg',
+  '/HomePicture4.jpeg',
+  '/HomePicture5.jpeg',
+  '/HomePicture6.jpeg',
+  '/HomePicture8.jpeg',
+  '/HomePicture10.jpeg',
+  '/HomePicture11.jpeg',
+  '/HomePicture12.jpeg',
+  '/HomePicture13.jpeg',
+  '/HomePicture14.jpeg',
+  '/HomePicture15.jpeg',
+  '/HomePicture16.jpeg',
+  '/HomePicture17.jpeg',
+  '/HomePicture18.jpeg',
+  '/HomePicture19.jpeg',
+  '/HomePicture20.jpeg',
+  '/HomePicture22.jpeg',
+  '/HomePicture23.jpeg',
+  '/HomePicture24.jpeg',
+  '/HomePicture25.jpeg',
+  '/HomePicture26.jpeg',
+  '/HomePicture27.jpeg',
+  '/HomePicture29.jpeg',
 ]
 
 const agentPhoto = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80'
@@ -46,12 +60,15 @@ function renderPage() {
   document.querySelector('#app').innerHTML = `
     <nav class="navbar" aria-label="Principal">
       <div class="navbar__logo">Casa Flama 51</div>
-      <a href="#contact" class="navbar__cta" role="button">${icons.whatsapp}<span class="navbar__cta-text">Agendar Visita</span><span class="navbar__cta-text navbar__cta-text--short">Visita</span></a>
+      <div class="navbar__actions">
+        <a href="https://www.youtube.com/shorts/3aCj9nXpn00?feature=share" class="navbar__tour" target="_blank" rel="noopener noreferrer">${icons.video}&nbsp;Tour</a>
+        <a href="https://wa.me/524421299136?text=Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20casa%20en%20Flama" class="navbar__cta" target="_blank" rel="noopener noreferrer">${icons.whatsapp}<span class="navbar__cta-text">Agendar Visita</span><span class="navbar__cta-text navbar__cta-text--short">Visita</span></a>
+      </div>
     </nav>
 
     <header class="hero" id="hero">
       <div class="hero__image">
-        <img src="${images[6]}" alt="Vista exterior de la casa familiar moderna The Grove Estate con jardín paisajístico" loading="eager" />
+        <img src="${images[0]}" alt="Vista exterior de la casa familiar moderna The Grove Estate con jardín paisajístico" loading="eager" />
       </div>
       <div class="hero__overlay"></div>
       <div class="container">
@@ -64,7 +81,7 @@ function renderPage() {
             <span class="hero__price-note">MXN</span>
           </div>
           <div class="hero__actions">
-            <a href="#contact" class="btn btn--primary">${icons.phone} Agendar Visita</a>
+            <a href="https://wa.me/524421299136?text=Me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20casa%20en%20Flama" class="btn btn--primary" target="_blank" rel="noopener noreferrer">${icons.whatsapp} Agendar Visita</a>
           </div>
         </div>
       </div>
@@ -104,21 +121,11 @@ function renderPage() {
         <p class="section__subtitle">Cada detalle ha sido diseñado cuidadosamente para la vida familiar moderna.</p>
         <div style="height: 40px;"></div>
         <div class="gallery__grid">
-          <div class="gallery__item gallery__item--tall" data-index="1">
-            <img src="${images[8]}" alt="Amplia sala de concepto abierto con luz natural" loading="lazy" />
-          </div>
-          <div class="gallery__item" data-index="2">
-            <img src="${images[7]}" alt="Cocina moderna con isla y electrodomésticos premium" loading="lazy" />
-          </div>
-          <div class="gallery__item" data-index="3">
-            <img src="${images[9]}" alt="Dormitorio principal con vestidor y baño privado" loading="lazy" />
-          </div>
-          <div class="gallery__item gallery__item--wide" data-index="4">
-            <img src="${images[10]}" alt="Patio trasero con comedor al aire libre y piscina" loading="lazy" />
-          </div>
-          <div class="gallery__item" data-index="5">
-            <img src="${images[11]}" alt="Oficina en casa con estanterías integradas y vista al jardín" loading="lazy" />
-          </div>
+          ${images.slice(1).map((src, i) => `
+            <div class="gallery__item" data-index="${i + 1}">
+              <img src="${src}" alt="Vista de la propiedad" loading="lazy" />
+            </div>
+          `).join('')}
         </div>
       </div>
     </section>
@@ -127,7 +134,7 @@ function renderPage() {
       <div class="container">
         <div class="about__grid">
           <div class="about__image">
-            <img src="${images[8]}" alt="Oasis trasero con patio cubierto y jardín paisajístico" loading="lazy" />
+            <img src="${images[4]}" alt="Oasis trasero con patio cubierto y jardín paisajístico" loading="lazy" />
           </div>
           <div>
             <p class="section__label">La Casa</p>
@@ -196,7 +203,7 @@ function renderPage() {
     <footer class="footer">
       <div class="container">
         <div class="footer__logo">Casa Flama 51</div>
-        <p class="footer__copy"> Telefono / Whatsapp: 442 123 4567</p>
+        <p class="footer__copy"> Telefono / Whatsapp: 442 129 9136</p>
         <p class="footer__copy"> Horarios de atención: Lunes a Sábado 9:00 AM - 5:00 PM</p>
       </div>
     </footer>
